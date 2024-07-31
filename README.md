@@ -1,80 +1,115 @@
 # Skymod RAG Project
+# ChatPDF Query Application
 
-## Project Details
+ChatPDF is a web application that allows users to upload PDF files and interact with a chatbot to query the contents of the PDF. The application uses a Flask backend to handle file uploads and queries, and a React frontend to provide a user interface.
 
-This project is an assessment for the Junior Software Developer position at Skymod Technology. Our aim is to evaluate skills in creating a RAG (Retrieval-Augmented Generation) system.
+## Features
 
-### Expectations
+- Upload PDF files to the server
+- Query the contents of the uploaded PDF through a chatbot interface
+- Real-time progress updates during PDF upload
+- User-friendly interface with immediate feedback
 
-Candidates are expected to create a simple PDF Query RAG system. This system should be able to extract information from a given PDF file and answer user questions.
+## Technologies Used
 
-### Technical Requirements
+- Frontend: React, Vite, Redux Toolkit
+- Backend: Flask, Python
+- Vector Store: Pinecone
+- Language Model: OpenAI (via Langchain)
+- PDF Processing: PyPDFLoader (via Langchain)
+- Embeddings: OpenAIEmbeddings (via Langchain)
 
-1. **Backend (Node.js, Express.js, or Python):**
-   - Read PDF file and convert to text
-   - Split text into chunks
-   - Set up RAG system using LangChain.js
-   - Create a question-answering API endpoint
+## Setup Instructions
 
-2. **Frontend (React, Vite):**
-   - Input field for user questions
-   - Area to display answers
+### Prerequisites
 
-3. **State Management:**
-   - Use Redux or Redux Toolkit
+- Node.js and npm
+- Python 3.8+
+- Pinecone API key
+- OpenAI API key
 
-4. **API Integration:**
-   - Establish communication between frontend and backend
+### Backend Setup
 
-## Development Process
+1. **Clone the repository:**
 
-1. Fork this repository to your GitHub account.
-2. Clone the project to your local machine.
-3. Create the necessary file structure for backend and frontend.
-4. Identify and install the required dependencies.
-5. Develop your backend and frontend.
-6. Commit and push your code regularly.
+    ```sh
+    git clone 
+    ```
 
-## Evaluation Criteria
+2. **Navigate to the backend directory:**
 
-1. Functionality (40 points)
-2. Code Quality and Organization (30 points)
-3. Technology Usage (20 points)
-4. Documentation and Presentation (10 points)
+    ```sh
+    cd backend
+    ```
 
-Bonus points:
-- Error handling (+5 points)
-- UI design (+5 points)
-- Extra features (+5 points each)
+3. **Create and activate a virtual environment:**
 
-## Important Notes
+    ```sh
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
 
-- You have 3 days to complete this project.
-- When you complete your project, please email us the URL of your forked repository.
-- This work should be your original creation. Avoid collaborating with others or sharing your code.
-- Remember to add a brief README file explaining how to set up and run your project.
-- If you have any questions, please contact us at hello@skymod.tech
+4. **Install dependencies:**
 
-## Sample PDF
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-A sample PDF file is provided in this repository for you to work with. You can use this file to test your system.
+5. **Run the backend server:**
 
-Good luck with your project!
+    ```sh
+    python app.py
+    ```
 
-Skymod Technology HR Team
+### Frontend Setup
 
-## Getting Started
+1. **Open a new terminal:**
 
-Dear Candidate,
+2. **Navigate to the frontend directory:**
 
-Please follow these steps for the Skymod RAG Project:
+    ```sh
+   cd frontend
+    ```
 
-1. Visit this URL: https://github.com/SKYMOD-Team/RAG-App/
-2. Click on the "Use this template" button.
-3. Name your new repository "SkymodRAGProject-[YourFirstNameLastName]".
-4. Set your repository to "Private".
-5. After creating your repository, go to "Settings" > "Collaborators and teams".
-6. Add "SKYMOD35" as a collaborator.
-7. After completing your project, email us your repository URL.
+3. **Install dependencies:**
 
-We kindly request that you complete the project within 3 days and share your repository URL with us. Good luck with your work!
+    ```sh
+    npm install
+    ```
+
+4. **Run the frontend server:**
+
+    ```sh
+    npm run dev
+    ```
+
+## Running the Application
+
+1. **Start the backend server:**
+
+    Ensure your backend server is running by following the steps in the Backend Setup section.
+
+2. **Start the frontend server:**
+
+    Ensure your frontend server is running by following the steps in the Frontend Setup section.
+
+3. **Access the application:**
+
+    Open your web browser and navigate to port where the frontend is running
+
+## Usage
+
+1. **Upload a PDF:**
+
+    Click on the "Upload PDF" button and select a PDF file from your computer. Wait for the upload to complete. The progress will be shown on the button, and it will change to "Ready" once the upload is complete.
+    You can upload a new pdf by clicking the same button again, and make queries for the new pdf.
+**Information about previously uploaded PDFs does not affect new queries.**
+3. **Ask a question:**
+
+    Enter your question in the input field and click "Submit." Your question will appear in the chat interface immediately, and the chatbot's response will follow shortly.
+
+4. **Receive responses:**
+
+    The chatbot will provide answers based on the contents of the uploaded PDF. If no PDF is uploaded, the chatbot will prompt you to upload a PDF.
+
+

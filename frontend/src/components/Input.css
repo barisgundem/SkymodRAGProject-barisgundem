@@ -1,0 +1,60 @@
+.input-form {
+    display: flex;
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  
+  .input-field {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .upload-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    transition: background-color 0.1s ease;
+  }
+  
+  .upload-button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .upload-button:hover {
+    background-color: #218838;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  

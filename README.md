@@ -3,8 +3,8 @@
 
 ChatPDF is a web application that allows users to upload PDF files and interact with a chatbot to query the contents of the PDF. The application uses a Flask backend to handle file uploads and queries, and a React frontend to provide a user interface.
 
-available at: http://3.84.248.88:5173/ (deployed on aws ec2)
-If your question is not answered, wait a few more seconds. The Pinecone side is a bit slow.
+available at: http://3.84.248.88:5173/ (deployed on aws ec2).
+If your query is not answered, wait a few more seconds. The Pinecone side is a bit slow.
 <img width="1087" alt="Ekran Resmi 2024-07-31 21 24 05" src="https://github.com/user-attachments/assets/055cd6ee-8caa-4627-ae4e-ae5c292035e9">
 
 ## Features
